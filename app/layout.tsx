@@ -2,7 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Montserrat } from 'next/font/google'
 import { MetaContent } from './content'
-import { Header } from './shared'
+import { Footer, Header } from './shared'
 
 const mont = Montserrat({ subsets: ['latin'] })
 
@@ -21,8 +21,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={mont.className}>
+        <div className='min-h-screen grid grid-rows-layout'>
         <Header />
-        {children}
+        <main>
+          {children}
+        </main>
+        <Footer/>
+        </div>
       </body>
     </html>
   )

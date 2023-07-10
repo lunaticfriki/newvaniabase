@@ -22,3 +22,7 @@ a {
 a {
   @apply transition-all decoration-0;
 }
+
+span {
+  @apply text-pink-600;
+}
