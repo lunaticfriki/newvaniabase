@@ -9,7 +9,8 @@
 }
 
 body {
-  padding: 1rem;
+  @apply text-gray-200;
+  @apply bg-zinc-900;
 }
 
 h1,
