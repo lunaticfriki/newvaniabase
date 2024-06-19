@@ -1,6 +1,5 @@
-import { ItemsPreview, Navigation } from '@/modules';
-
 import type { Item } from '@/modules';
+import { ItemsPreview } from '@/modules';
 import { PATHS } from '@/content';
 import { createClientServer } from '@/utils';
 import { redirect } from 'next/navigation';
@@ -25,7 +24,6 @@ export default async function ProtectedPage() {
 
   return (
     <div className="grid w-full">
-      <Navigation />
       <div className="flex flex-wrap w-full gap-2 p-2">
         {!items.length ? (
           <p className="flex items-center justify-center w-full h-full">

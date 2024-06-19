@@ -1,6 +1,6 @@
 import './globals.css';
 
-import { metadataContent, raj } from '@/modules';
+import { Navigation, metadataContent, raj } from '@/modules';
 
 export const metadata = metadataContent;
 
@@ -11,7 +11,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={raj.className}>
-      <body>
+      <body className="w-full min-h-screen">
+        <Navigation />
         <main className="flex flex-col items-center min-h-screen">
           {children}
         </main>
