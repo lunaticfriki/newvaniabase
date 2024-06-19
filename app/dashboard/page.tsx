@@ -24,7 +24,7 @@ export default async function ProtectedPage() {
   const items: Item[] = data as Item[];
 
   return (
-    <div className="grid w-full place-content-center place-items-center">
+    <div className="grid w-full">
       <Navigation />
       <div className="flex flex-wrap w-full gap-2 p-2">
         {!items.length ? (

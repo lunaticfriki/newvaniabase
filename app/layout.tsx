@@ -11,7 +11,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={raj.className}>
-      <body className="bg-background text-foreground">
+      <body>
         <main className="flex flex-col items-center min-h-screen">
           {children}
         </main>

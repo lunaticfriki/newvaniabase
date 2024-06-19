@@ -1,8 +1,13 @@
 import Link from 'next/link';
+import { LucideIcons } from './icons';
+import { TOOLTIP_MESSAGES } from '@/content';
+import { Tooltip } from '@nextui-org/tooltip';
 import { createClient } from '@/utils/supabase/server';
 import { redirect } from 'next/navigation';
 
 export async function AuthButton() {
+  const { logout_tooltip } = TOOLTIP_MESSAGES;
+
   const supabase = createClient();
 
   const {
@@ -22,7 +27,9 @@ export async function AuthButton() {
       Hey, <span>{user.email}!</span>
       <form action={signOut}>
         <button className="px-4 py-2 no-underline rounded-md hover:text-[var(--primary)]">
-          Logout
+          <Tooltip showArrow content={logout_tooltip}>
+            <LucideIcons.out />
+          </Tooltip>
         </button>
       </form>
     </div>

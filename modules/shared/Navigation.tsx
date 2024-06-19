@@ -11,8 +11,7 @@ export const Navigation = () => {
 
   return (
     <nav className="flex flex-col items-center justify-end w-full h-full p-4 lg:flex-row">
-      <AuthButton />
-      <ul className="flex gap-2 py-4 my-4 lg:px-4 lg:mx-4 lg:py-0 lg:my-0 border-t-2 border-l-0 border-[var(--primary)] lg:border-l-2 lg:border-t-0">
+      <ul className="flex gap-2 py-4 my-4 lg:px-4 lg:mx-4 lg:py-0 lg:my-0 border-b-2 border-r-0 border-[var(--primary)] lg:border-r-2 lg:border-b-0">
         <li>
           <Link href={home}>
             <Tooltip showArrow content={home_tooltip}>
@@ -27,7 +26,8 @@ export const Navigation = () => {
             </Tooltip>
           </Link>
         </li>
-      </ul>
+      </ul>{' '}
+      <AuthButton />
     </nav>
   );
 };

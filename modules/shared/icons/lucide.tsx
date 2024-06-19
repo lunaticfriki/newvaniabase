@@ -1,4 +1,4 @@
-import { ChevronLeft, ChevronRight, Home, Info, X } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Home, Info, LogOut, X } from 'lucide-react';
 
 export const LucideIcons = {
   close: X,
@@ -6,4 +6,5 @@ export const LucideIcons = {
   right: ChevronRight,
   left: ChevronLeft,
   home: Home,
+  out: LogOut,
 };
