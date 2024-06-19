@@ -1,12 +1,14 @@
+import { GREETING, TOOLTIP_MESSAGES } from '@/content';
+
 import Link from 'next/link';
 import { LucideIcons } from '../icons';
-import { TOOLTIP_MESSAGES } from '@/content';
 import { Tooltip } from '@nextui-org/tooltip';
 import { createClientServer } from '@/utils';
 import { redirect } from 'next/navigation';
 
 export async function AuthButton() {
   const { logout_tooltip } = TOOLTIP_MESSAGES;
+  const { greet, exclamation } = GREETING;
 
   const supabase = createClientServer();
 
@@ -24,7 +26,9 @@ export async function AuthButton() {
 
   return user ? (
     <div className="flex items-center gap-4">
-      Hey, <span>{user.email}!</span>
+      <p>
+        {greet} <span>{user.email}</span> {exclamation}
+      </p>
       <form action={signOut}>
         <button className="px-4 py-2 no-underline rounded-md hover:text-[var(--primary)]">
           <Tooltip showArrow content={logout_tooltip}>
