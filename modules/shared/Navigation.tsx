@@ -26,7 +26,7 @@ export const Navigation = () => {
             </Tooltip>
           </Link>
         </li>
-      </ul>{' '}
+      </ul>
       <AuthButton />
     </nav>
   );

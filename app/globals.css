@@ -6,11 +6,12 @@
   --black: #060407be;
   --white: #ffffffd5;
   --primary: #f32fb5;
+  --secondary: #c9d611;
   --background: #0e0712d9;
 }
 
 body {
-  @apply bg-[var(--background)] text-[var(--white)] font-sans;
+  @apply bg-[var(--background)] text-[var(--white)];
 }
 
 span {
