@@ -15,7 +15,7 @@ export const ItemPreview = ({ item }: Props) => {
       <img
         src={item.cover}
         alt={item.title}
-        className="w-full h-full transition-all group-hover:hue-rotate-90"
+        className="w-full h-full transition-all group-hover:border-4 border-[var(--primary)]"
       />
       <p className="w-full py-4 text-xl text-end">{item.title}</p>
     </Link>

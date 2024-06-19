@@ -7,7 +7,8 @@
   --white: #ffffffd5;
   --primary: #f32fb5;
   --secondary: #c9d611;
-  --background: #0e0712d9;
+  --background: #0e0712;
+  --blur: #0e0712dc;
 }
 
 body {
