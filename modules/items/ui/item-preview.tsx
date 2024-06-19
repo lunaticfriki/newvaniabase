@@ -11,7 +11,7 @@ export const ItemPreview = ({ item }: Props) => {
     <Link
       href={`/items/${item.slug}`}
       key={item.id}
-      className="flex flex-col justify-between h-[400px] w-[300px] m-4 hover:cursor-pointer transition-all group"
+      className="flex flex-col justify-between h-[400px] w-[235px]  lg:h-[400px] lg:w-[300px] m-4 mb-6 lg:mb-4 hover:cursor-pointer transition-all group"
     >
       <Image
         src={item.cover!}
