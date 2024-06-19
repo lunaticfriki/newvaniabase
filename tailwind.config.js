@@ -1,4 +1,3 @@
-import { nextui } from '@nextui-org/react';
 /** @type {import('tailwindcss').Config} */
 import plugin from 'tailwindcss/plugin';
 
@@ -27,5 +26,4 @@ export const plugins = [
       { values: theme('textShadow') }
     );
   }),
-  nextui(),
 ];

@@ -1,26 +1,7 @@
-import type { Item } from '@/modules';
-import { ItemsPreview } from '@/modules';
-import { PATHS } from '@/content';
-import { createClientServer } from '@/utils';
-import { redirect } from 'next/navigation';
+import { ItemsPreview, useGetitems } from '@/modules';
 
 export default async function ProtectedPage() {
-  const supabase = createClientServer();
-
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-
-  if (!user) {
-    return redirect(PATHS.login);
-  }
-
-  const { data } = await supabase
-    .from('items')
-    .select()
-    .filter('owner', 'eq', user.id);
-
-  const items: Item[] = data as Item[];
+  const items = await useGetitems();
 
   return (
     <div className="grid w-full">
