@@ -1,5 +1,6 @@
 import { BackButton } from '@/modules';
 import Link from 'next/link';
+import { PATHS } from '@/content';
 import { SubmitButton } from './submit-button';
 import { createClientServer } from '@/utils';
 import { headers } from 'next/headers';
@@ -10,6 +11,8 @@ export default function Login({
 }: {
   searchParams: { message: string };
 }) {
+  const { home, login } = PATHS;
+
   const signIn = async (formData: FormData) => {
     'use server';
 
@@ -26,7 +29,7 @@ export default function Login({
       return redirect('/login?message=Could not authenticate user');
     }
 
-    return redirect('/dashboard');
+    return redirect(home);
   };
 
   const signUp = async (formData: FormData) => {
@@ -46,10 +49,10 @@ export default function Login({
     });
 
     if (error) {
-      return redirect('/login?message=Could not authenticate user');
+      return redirect(`${login}?message=Could not authenticate user`);
     }
 
-    return redirect('/login?message=Check email to continue sign in process');
+    return redirect(`${login}?message=Check email to continue sign in process`);
   };
 
   return (
