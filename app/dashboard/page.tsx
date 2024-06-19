@@ -1,6 +1,7 @@
 import { ItemsPreview, Navigation } from '@/modules';
 
 import type { Item } from '@/modules/items/types';
+import { PATHS } from '@/content';
 import { createClient } from '@/utils/supabase/server';
 import { redirect } from 'next/navigation';
 
@@ -12,7 +13,7 @@ export default async function ProtectedPage() {
   } = await supabase.auth.getUser();
 
   if (!user) {
-    return redirect('/login');
+    return redirect(PATHS.login);
   }
 
   const { data } = await supabase

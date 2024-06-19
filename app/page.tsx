@@ -1,5 +1,6 @@
+import { PATHS } from '@/content';
 import { redirect } from 'next/navigation';
 
 export default async function Index() {
-  return redirect('/login');
+  return redirect(PATHS.login);
 }
