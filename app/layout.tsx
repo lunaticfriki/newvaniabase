@@ -1,6 +1,8 @@
-import './globals.css';
+import '@/assets/styles/globals.css';
 
-import { Navigation, metadataContent, raj } from '@/modules';
+import { Navigation, metadataContent } from '@/modules';
+
+import { raj } from '@/assets/fonts';
 
 export const metadata = metadataContent;
 
