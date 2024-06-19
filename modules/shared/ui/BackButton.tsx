@@ -1,6 +1,6 @@
 'use client';
 
-import { LucideIcons } from './icons';
+import { LucideIcons } from '../icons';
 import { useRouter } from 'next/navigation';
 
 export const BackButton = () => {

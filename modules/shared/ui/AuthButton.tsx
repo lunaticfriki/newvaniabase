@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { LucideIcons } from './icons';
+import { LucideIcons } from '../icons';
 import { TOOLTIP_MESSAGES } from '@/content';
 import { Tooltip } from '@nextui-org/tooltip';
 import { createClientServer } from '@/utils';

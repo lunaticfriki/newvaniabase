@@ -2,7 +2,7 @@ import { PATHS, TOOLTIP_MESSAGES } from '@/content';
 
 import { AuthButton } from './AuthButton';
 import Link from 'next/link';
-import { LucideIcons } from './icons';
+import { LucideIcons } from '../icons';
 import { Tooltip } from '@nextui-org/tooltip';
 
 export const Navigation = () => {

@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { Item } from './types';
+import { Item } from '../types/item-types';
 import Link from 'next/link';
 
 interface Props {

@@ -1,5 +1,5 @@
 import { ITEMS_CONTENT } from '@/content';
-import { Item } from './types';
+import { Item } from '@/modules';
 
 interface Props {
   item: Item;

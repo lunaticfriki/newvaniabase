@@ -13,7 +13,7 @@ export default function RootLayout({
     <html lang="en" className={raj.className}>
       <body className="w-full min-h-screen">
         <Navigation />
-        <main className="flex flex-col items-center min-h-screen">
+        <main className="flex flex-col items-center w-full h-full">
           {children}
         </main>
       </body>

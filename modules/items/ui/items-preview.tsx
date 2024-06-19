@@ -1,4 +1,4 @@
-import { Item } from './types';
+import { Item } from '../types/item-types';
 import { ItemPreview } from './item-preview';
 
 interface Props {
