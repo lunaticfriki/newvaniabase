@@ -1,5 +1,6 @@
 import { AuthButton } from './AuthButton';
 import Link from 'next/link';
+import { LucideIcons } from './icons';
 
 export const Navigation = () => {
   return (
@@ -7,10 +8,14 @@ export const Navigation = () => {
       <AuthButton />
       <ul className="flex gap-2 py-4 my-4 lg:px-4 lg:mx-4 lg:py-0 lg:my-0 border-t-2 border-l-0 border-[var(--primary)] lg:border-l-2 lg:border-t-0">
         <li>
-          <Link href="/dashboard">Home</Link>
+          <Link href="/dashboard">
+            <LucideIcons.home />
+          </Link>
         </li>
         <li>
-          <Link href="/about">About</Link>
+          <Link href="/about">
+            <LucideIcons.info />
+          </Link>
         </li>
       </ul>
     </nav>
