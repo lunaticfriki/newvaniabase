@@ -1,11 +1,7 @@
-import { Item } from '../types/item-types';
+import type { Item } from '../types/item-types';
 import { ItemPreview } from './item-preview';
 
-interface Props {
-  items: Item[];
-}
-
-export const ItemsPreview = ({ items }: Props) => {
+export const ItemsPreview = ({ items }: { items: Item[] }) => {
   return (
     <div className="grid w-full h-full gap-2 place-items-center">
       <h2 className="text-2xl">Last items</h2>

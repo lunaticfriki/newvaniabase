@@ -1,11 +1,7 @@
 import { ITEMS_CONTENT } from '@/content';
-import { Item } from '@/modules';
+import type { Item } from '@/modules';
 
-interface Props {
-  item: Item;
-}
-
-export const ItemDetail = ({ item }: Props) => {
+export const ItemDetail = ({ item }: { item: Item }) => {
   const { completed, incomplete } = ITEMS_CONTENT;
 
   return (

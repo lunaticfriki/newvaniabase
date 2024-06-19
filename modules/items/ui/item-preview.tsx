@@ -1,12 +1,8 @@
 import Image from 'next/image';
-import { Item } from '../types/item-types';
+import type { Item } from '../types/item-types';
 import Link from 'next/link';
 
-interface Props {
-  item: Item;
-}
-
-export const ItemPreview = ({ item }: Props) => {
+export const ItemPreview = ({ item }: { item: Item }) => {
   return (
     <Link
       href={`/items/${item.slug}`}
