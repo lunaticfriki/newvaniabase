@@ -25,6 +25,19 @@ button {
   @apply transition-all;
 }
 
+img {
+  clip-path: polygon(
+    0 0,
+    90% 0,
+    100% 10%,
+    100% 100%,
+    80% 100%,
+    10% 100%,
+    0 90%,
+    0% 20%
+  );
+}
+
 .animate-in {
   animation: animateIn 0.3s ease 0.15s both;
 }
