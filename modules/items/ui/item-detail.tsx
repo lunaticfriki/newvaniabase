@@ -18,7 +18,8 @@ export const ItemDetail = ({ item }: { item: Item }) => {
         {item.publisher} - <label className="uppercase">{item.topic}</label>
       </p>
       {/* TODO: TAGS
-   <p>{item.tags}</p>  */}
+      <p>{item.tags}</p>  
+      */}
       <span>{item.completed ? completed : incomplete}</span>
     </div>
   );
