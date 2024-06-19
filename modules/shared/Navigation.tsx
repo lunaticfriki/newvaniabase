@@ -1,12 +1,12 @@
-import Link from 'next/link';
 import { AuthButton } from './AuthButton';
+import Link from 'next/link';
 
 export const Navigation = () => {
   return (
     <nav className="flex items-center justify-end w-full h-full p-4">
       <ul className="flex gap-2 p-2">
         <li>
-          <Link href="/">Home</Link>
+          <Link href="/dashboard">Home</Link>
         </li>
         <li>
           <Link href="/about">About</Link>

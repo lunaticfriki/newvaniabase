@@ -15,15 +15,24 @@ export default async function ProtectedPage() {
     return redirect('/login');
   }
 
-  const { data } = await supabase.from('items').select();
+  const { data } = await supabase
+    .from('items')
+    .select()
+    .filter('owner', 'eq', user.id);
 
-  const items = data as Item[];
+  const items: Item[] = data as Item[];
 
   return (
     <div className="grid w-full place-content-center place-items-center">
       <Navigation />
       <div className="flex flex-wrap w-full gap-2 p-2">
-        <ItemsPreview items={items} />
+        {!items.length ? (
+          <p className="flex items-center justify-center w-full h-full">
+            Sorry, no items yet
+          </p>
+        ) : (
+          <ItemsPreview items={items} />
+        )}
       </div>
     </div>
   );
