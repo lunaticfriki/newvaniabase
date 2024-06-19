@@ -27,7 +27,7 @@ button {
   @apply transition-all;
 }
 
-img {
+.image {
   clip-path: polygon(
     0 0,
     90% 0,

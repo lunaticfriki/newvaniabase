@@ -11,7 +11,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={raj.className}>
-      <body className="w-full min-h-screen">
+      <body className="w-full min-h-screen grid grid-rows-[auto,1fr]">
         <Navigation />
         <main className="flex flex-col items-center w-full h-full">
           {children}
