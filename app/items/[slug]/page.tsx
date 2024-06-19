@@ -29,7 +29,7 @@ export default async function ItemPage({
   const item = data[0] as Item;
 
   return (
-    <div className="w-[90%] lg:w-[550px] text-end">
+    <div className="w-[90%] lg:w-[550px] text-end px-2 py-4">
       <h2 className="text-3xl">{item.title}</h2>
       <p className="text-[var(--primary)] text-2xl">{item.author}</p>
       <img
@@ -37,13 +37,13 @@ export default async function ItemPage({
         alt={item.title}
         className="w-full my-4 transition-all group-hover:hue-rotate-90"
       />
-      <p>{item.description}</p>
+      <p className="mb-4">{item.description}</p>
       <p>
         {item.publisher} - <label className="uppercase">{item.topic}</label>
       </p>
       {/* TODO: TAGS
        <p>{item.tags}</p>  */}
-      <span>{item.completed ? 'Completed' : 'Uncompleted'}</span>
+      <span>{item.completed ? 'Completed' : 'Incomplete'}</span>
     </div>
   );
 }
