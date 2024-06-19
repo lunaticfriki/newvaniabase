@@ -54,9 +54,8 @@ export default function Login({
 
   return (
     <div className="flex flex-col justify-center flex-1 w-full gap-2 px-8 sm:max-w-md">
-      <BackButton />
-
-      <form className="flex flex-col justify-center flex-1 w-full gap-2 animate-in text-foreground">
+      <form className="flex flex-col justify-center flex-1 w-full gap-2 animate-in">
+        <BackButton />
         <label className="text-md" htmlFor="email">
           Email
         </label>
@@ -78,20 +77,20 @@ export default function Login({
         />
         <SubmitButton
           formAction={signIn}
-          className="px-4 py-2 mb-2 bg-[var(--primary)] rounded-md text-foreground"
+          className="px-4 py-2 mb-2 bg-[var(--primary)] rounded-md"
           pendingText="Signing In..."
         >
           Sign In
         </SubmitButton>
         <SubmitButton
           formAction={signUp}
-          className="px-4 py-2 mb-2 border rounded-md border-foreground/20 text-foreground"
+          className="px-4 py-2 mb-2 border rounded-md border-foreground/20"
           pendingText="Signing Up..."
         >
           Sign Up
         </SubmitButton>
         {searchParams?.message && (
-          <p className="p-4 mt-4 text-center bg-foreground/10 text-foreground">
+          <p className="p-4 mt-4 text-center bg-foreground/10">
             {searchParams.message}
           </p>
         )}

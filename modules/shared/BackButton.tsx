@@ -8,7 +8,7 @@ export const BackButton = () => {
   return (
     <button
       onClick={() => router.back()}
-      className="absolute flex items-center px-4 py-2 text-sm no-underline rounded-md left-8 top-8 group"
+      className="flex items-center justify-start py-2 text-sm no-underline rounded-md group"
     >
       <LucideIcons.left />
       <p className="group-hover:text-[var(--primary)] transition-all">Back</p>
