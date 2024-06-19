@@ -1,12 +1,12 @@
 import { ItemsPreview, Navigation } from '@/modules';
 
-import type { Item } from '@/modules/items/types';
+import type { Item } from '@/modules';
 import { PATHS } from '@/content';
-import { createClient } from '@/utils/supabase/server';
+import { createClientServer } from '@/utils';
 import { redirect } from 'next/navigation';
 
 export default async function ProtectedPage() {
-  const supabase = createClient();
+  const supabase = createClientServer();
 
   const {
     data: { user },

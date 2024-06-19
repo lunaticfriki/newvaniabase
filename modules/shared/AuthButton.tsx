@@ -2,13 +2,13 @@ import Link from 'next/link';
 import { LucideIcons } from './icons';
 import { TOOLTIP_MESSAGES } from '@/content';
 import { Tooltip } from '@nextui-org/tooltip';
-import { createClient } from '@/utils/supabase/server';
+import { createClientServer } from '@/utils';
 import { redirect } from 'next/navigation';
 
 export async function AuthButton() {
   const { logout_tooltip } = TOOLTIP_MESSAGES;
 
-  const supabase = createClient();
+  const supabase = createClientServer();
 
   const {
     data: { user },
@@ -17,7 +17,7 @@ export async function AuthButton() {
   const signOut = async () => {
     'use server';
 
-    const supabase = createClient();
+    const supabase = createClientServer();
     await supabase.auth.signOut();
     return redirect('/login');
   };
