@@ -4,7 +4,12 @@ import { PATHS } from '@/content';
 import { createClientServer } from '@/utils';
 import { redirect } from 'next/navigation';
 
-export const useGetItems = async (all?: boolean) => {
+/**
+ * Description Fetch items by user id
+ * @param {boolean} all Fetch all items or just the limited list
+ * @returns {Item[]} items
+ */
+export const useGetItems = async (all?: boolean): Promise<Item[]> => {
   const supabase = createClientServer();
 
   const {

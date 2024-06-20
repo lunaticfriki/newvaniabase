@@ -8,7 +8,7 @@ export default async function ItemPage({
   params: { slug: string };
 }) {
   const { no_data } = ITEMS_CONTENT;
-  const item = await useGetItemBySlug(params);
+  const item = await useGetItemBySlug(params.slug);
 
   if (!item)
     return (

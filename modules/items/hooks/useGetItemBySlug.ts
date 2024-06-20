@@ -3,11 +3,12 @@ import { PATHS } from '@/content';
 import { createClientServer } from '@/utils';
 import { redirect } from 'next/navigation';
 
-interface Params {
-  slug: string;
-}
-
-export const useGetItemBySlug = async (params: Params) => {
+/**
+ * Description Fetch item by slug
+ * @param {string} slug Slug of the item selected
+ * @returns {Item | null} item
+ */
+export const useGetItemBySlug = async (slug: string): Promise<Item | null> => {
   const supabase = createClientServer();
 
   const {
@@ -21,7 +22,7 @@ export const useGetItemBySlug = async (params: Params) => {
   const { data } = await supabase
     .from('items')
     .select()
-    .eq('slug', params.slug)
+    .eq('slug', slug)
     .filter('owner', 'eq', user.id);
 
   if (!data || !data.length) {
