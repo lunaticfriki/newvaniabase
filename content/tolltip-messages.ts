@@ -3,4 +3,5 @@ export const TOOLTIP_MESSAGES = {
   about_tooltip: 'About Vaniabase',
   logout_tooltip: 'Logout',
   items_tooltip: 'All Items',
+  search_tooltip: 'Search',
 };

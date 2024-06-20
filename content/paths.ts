@@ -4,6 +4,6 @@ export const PATHS = {
   login: '/login',
   items: '/items',
   categories: '/categories',
-  search: '/search',
-  new_item: '/new-item',
+  search: '/items/search',
+  new_item: '/items/new-item',
 };
