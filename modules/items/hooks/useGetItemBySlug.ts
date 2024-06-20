@@ -4,9 +4,10 @@ import { createClientServer } from '@/utils';
 import { redirect } from 'next/navigation';
 
 /**
- * Description Fetch item by slug
- * @param {string} slug Slug of the item selected
- * @returns {Item | null} item
+ * Fetch an item by its slug. If user is not logged in, redirects to login page.
+ * @param {string} slug - The slug of the item to fetch.
+ * @returns {Promise<Item | null>} - A promise that resolves to the item or null if the item is not found. If the user is not logged in, this function will redirect to the login page and the promise will never resolve.
+ * @throws {Error} - Throws an error if there is a problem with the Supabase query.
  */
 export const useGetItemBySlug = async (slug: string): Promise<Item | null> => {
   const supabase = createClientServer();
