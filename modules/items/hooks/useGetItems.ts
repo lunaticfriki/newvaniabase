@@ -4,7 +4,7 @@ import { PATHS } from '@/content';
 import { createClientServer } from '@/utils';
 import { redirect } from 'next/navigation';
 
-export const useGetitems = async () => {
+export const useGetItems = async (all?: boolean) => {
   const supabase = createClientServer();
 
   const {
@@ -19,7 +19,7 @@ export const useGetitems = async () => {
     .from('items')
     .select()
     .filter('owner', 'eq', user.id)
-    .limit(LAST_ITEMS_LIMIT)
+    .limit(!all ? LAST_ITEMS_LIMIT : Infinity)
     .order('created_at', { ascending: false });
 
   const items: Item[] = data as Item[];

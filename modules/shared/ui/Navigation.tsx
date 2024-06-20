@@ -6,8 +6,8 @@ import { LucideIcons } from '../icons';
 import { Tooltip } from '@nextui-org/tooltip';
 
 export const Navigation = () => {
-  const { home, about } = PATHS;
-  const { home_tooltip, about_tooltip } = TOOLTIP_MESSAGES;
+  const { home, about, items } = PATHS;
+  const { home_tooltip, about_tooltip, items_tooltip } = TOOLTIP_MESSAGES;
 
   return (
     <nav className="sticky top-0 flex flex-col items-center justify-end w-full h-full lg:flex-row bg-[var(--blur)] z-10 mb-4 lg:p-4">
@@ -23,6 +23,13 @@ export const Navigation = () => {
           <Link href={about}>
             <Tooltip showArrow content={about_tooltip}>
               <LucideIcons.info />
+            </Tooltip>
+          </Link>
+        </li>
+        <li>
+          <Link href={items}>
+            <Tooltip showArrow content={items_tooltip}>
+              <LucideIcons.items />
             </Tooltip>
           </Link>
         </li>
