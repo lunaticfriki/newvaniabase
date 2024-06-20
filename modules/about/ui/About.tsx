@@ -1,4 +1,5 @@
 import { BackButton } from '../../shared';
+import { GITHUB_URL } from '@/content';
 import Link from 'next/link';
 
 export const About = () => {
@@ -9,11 +10,7 @@ export const About = () => {
         <p>
           Version: <span>1.0.0</span>
         </p>
-        <Link
-          href="http://www.github.com/lunaticfriki"
-          target="__blank"
-          className="group"
-        >
+        <Link href={GITHUB_URL} target="__blank" className="group">
           @lunaticfriki,
           <span className="group-hover:text-[var(--white)] px-2 transition-all">
             {new Date().getFullYear()}

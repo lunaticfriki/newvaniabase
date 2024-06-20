@@ -7,3 +7,5 @@ export const PATHS = {
   search: '/items/search',
   new_item: '/items/new-item',
 };
+
+export const GITHUB_URL = 'https://github.com/lunaticfriki';
