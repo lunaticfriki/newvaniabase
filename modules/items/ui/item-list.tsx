@@ -2,7 +2,7 @@ import { ITEMS_CONTENT } from '@/content';
 import { Item } from '../types/item-types';
 import { ItemsPreview } from './items-preview';
 
-export const Itemlist = ({ items }: { items: Item[] }) => {
+export const Itemlist = ({ items, all }: { items: Item[]; all?: boolean }) => {
   const { no_items } = ITEMS_CONTENT;
 
   return (
@@ -13,7 +13,7 @@ export const Itemlist = ({ items }: { items: Item[] }) => {
             {no_items}
           </p>
         ) : (
-          <ItemsPreview items={items} all />
+          <ItemsPreview items={items} all={all} />
         )}
       </div>
     </div>
