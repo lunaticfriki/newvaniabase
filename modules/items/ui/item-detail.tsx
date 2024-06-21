@@ -16,7 +16,7 @@ export const ItemDetail = ({ item }: { item: Item }) => {
           width={500}
           height={700}
           style={{ objectFit: 'contain' }}
-          className="my-4 transition-all group-hover:hue-rotate-90 w-[500px]"
+          className="my-4 transition-all group-hover:hue-rotate-90"
         />
       </div>
       <p className="mb-4 text-start">{item.description}</p>
