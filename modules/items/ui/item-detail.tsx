@@ -19,7 +19,7 @@ export const ItemDetail = ({ item }: { item: Item }) => {
           className="my-4 transition-all group-hover:hue-rotate-90 w-[500px]"
         />
       </div>
-      <p className="mb-4">{item.description}</p>
+      <p className="mb-4 text-start">{item.description}</p>
       <p>
         {item.publisher} - <label className="uppercase">{item.topic}</label>
       </p>
