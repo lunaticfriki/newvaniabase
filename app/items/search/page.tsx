@@ -6,7 +6,7 @@ export default function SearchItemPage() {
   const { name, placeholder } = SearchFormContent;
 
   return (
-    <div className="grid grid-rows-[auto,1fr] w-full h-full gap-2 px-8 sm:max-w-md">
+    <div className="grid w-full h-full gap-2 px-8 place-content-center place-items-center sm:max-w-md">
       <h2 className="text-2xl text-center">Search</h2>
       <form className="flex flex-col justify-center w-full gap-2 animate-in">
         <BackButton />
