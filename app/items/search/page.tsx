@@ -1,7 +1,7 @@
-import { SubmitButton } from '@/app/login/submit-button';
 import { BackButton, Input, Item, LucideIcons } from '@/modules';
-
 import { PATHS, SearchFormContent } from '@/content';
+
+import { SubmitButton } from '@/app/login/submit-button';
 import { createClientServer } from '@/utils';
 import { redirect } from 'next/navigation';
 
