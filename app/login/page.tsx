@@ -1,5 +1,4 @@
 import { BackButton } from '@/modules';
-import Link from 'next/link';
 import { PATHS } from '@/content';
 import { SubmitButton } from './submit-button';
 import { createClientServer } from '@/utils';
