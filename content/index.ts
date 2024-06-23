@@ -4,3 +4,4 @@ export * from './items';
 export * from './greeting';
 export * from './buttons';
 export * from './search';
+export * from './header';
