@@ -1,5 +1,5 @@
 import { SubmitButton } from '@/app/login/submit-button';
-import { BackButton, Input, Item, LucideIcons, SearchResults } from '@/modules';
+import { BackButton, Input, Item, LucideIcons } from '@/modules';
 
 import { PATHS, SearchFormContent } from '@/content';
 import { createClientServer } from '@/utils';
@@ -11,7 +11,8 @@ export default function SearchItemPage({
   searchParams: { message: string };
 }) {
   const { search } = PATHS;
-  const { name, placeholder, search_title } = SearchFormContent;
+  const { name, placeholder, search_title, pending_message } =
+    SearchFormContent;
 
   const searchItem = async (formData: FormData): Promise<Item[]> => {
     'use server';
@@ -56,7 +57,7 @@ export default function SearchItemPage({
             formAction={searchItem}
             className="hover:text-[var(--primary)] transition-all"
             type="submit"
-            pendingText="Searching... Seek and Destroy!"
+            pendingText={pending_message}
           >
             <LucideIcons.search />
           </SubmitButton>
