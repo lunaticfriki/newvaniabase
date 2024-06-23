@@ -1,5 +1,5 @@
 import { SubmitButton } from '@/app/login/submit-button';
-import { BackButton, Input, LucideIcons } from '@/modules';
+import { BackButton, Input, Item, LucideIcons, SearchResults } from '@/modules';
 
 import { PATHS, SearchFormContent } from '@/content';
 import { createClientServer } from '@/utils';
@@ -11,18 +11,27 @@ export default function SearchItemPage({
   searchParams: { message: string };
 }) {
   const { search } = PATHS;
-  const { name, placeholder } = SearchFormContent;
+  const { name, placeholder, search_title } = SearchFormContent;
 
-  const searchItem = async (formData: FormData) => {
+  const searchItem = async (formData: FormData): Promise<Item[]> => {
     'use server';
 
     const word = formData.get(name) as string;
     const supabase = createClientServer();
 
+    const {
+      data: { user },
+    } = await supabase.auth.getUser();
+
+    if (!user) {
+      return redirect(PATHS.login);
+    }
+
     const { data, error } = await supabase
       .from('items')
       .select()
-      .textSearch('title', word);
+      .filter('owner', 'eq', user.id)
+      .textSearch('search_item', word);
 
     if (error) {
       return redirect(`${search}?message=No item found for "${word}"`);
@@ -32,16 +41,17 @@ export default function SearchItemPage({
       return redirect(`${search}?message=No item found for "${word}"`);
     }
 
-    return redirect(`/items/${data[0].slug}`);
+    const slugs: string[] = data.map((item) => item.slug);
+
+    return redirect(`${search}/${slugs.join(',')}`);
   };
 
   return (
     <div className="grid w-full h-full gap-2 px-8 place-content-center place-items-center sm:max-w-md">
-      <h2 className="text-2xl text-center">Search</h2>
+      <h2 className="text-2xl text-center">{search_title}</h2>
       <form className="flex flex-col justify-center w-full gap-2 animate-in">
-        <BackButton />
         <div className="flex gap-2">
-          <Input name={name} placeholder={placeholder} required />{' '}
+          <Input name={name} placeholder={placeholder} required />
           <SubmitButton
             formAction={searchItem}
             className="hover:text-[var(--primary)] transition-all"
@@ -56,6 +66,7 @@ export default function SearchItemPage({
             {searchParams.message}
           </p>
         )}
+        <BackButton />
       </form>
     </div>
   );

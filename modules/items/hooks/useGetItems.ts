@@ -1,5 +1,5 @@
-import type { Item } from '../types/item-types';
-import { LAST_ITEMS_LIMIT } from '../constants';
+import type { Item } from '@/modules';
+import { LAST_ITEMS_LIMIT } from '@/modules';
 import { PATHS } from '@/content';
 import { createClientServer } from '@/utils';
 import { redirect } from 'next/navigation';
@@ -28,7 +28,5 @@ export const useGetItems = async (all?: boolean): Promise<Item[]> => {
     .limit(!all ? LAST_ITEMS_LIMIT : Infinity)
     .order('created_at', { ascending: false });
 
-  const items: Item[] = data as Item[];
-
-  return items;
+  return data as Item[];
 };

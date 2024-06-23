@@ -5,4 +5,5 @@ export const ITEMS_CONTENT = {
   last_items: 'Last items',
   all_items: 'All items',
   no_items: 'Sorry, no items yet',
+  items_results: 'Search results',
 };

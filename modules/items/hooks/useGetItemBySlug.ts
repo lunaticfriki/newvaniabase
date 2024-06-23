@@ -1,4 +1,4 @@
-import type { Item } from '../types/item-types';
+import type { Item } from '@/modules';
 import { PATHS } from '@/content';
 import { createClientServer } from '@/utils';
 import { redirect } from 'next/navigation';
