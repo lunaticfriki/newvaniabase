@@ -12,11 +12,7 @@ export const NavigationContent = [
     icon: <LucideIcons.home />,
     tooltip: home_tooltip,
   },
-  {
-    href: about,
-    icon: <LucideIcons.info />,
-    tooltip: about_tooltip,
-  },
+
   {
     href: items,
     icon: <LucideIcons.items />,
@@ -26,5 +22,10 @@ export const NavigationContent = [
     href: search,
     icon: <LucideIcons.search />,
     tooltip: search_tooltip,
+  },
+  {
+    href: about,
+    icon: <LucideIcons.info />,
+    tooltip: about_tooltip,
   },
 ];
