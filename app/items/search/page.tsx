@@ -32,7 +32,7 @@ export default function SearchItemPage({
       .from('items')
       .select()
       .filter('owner', 'eq', user.id)
-      .textSearch('search_item', word);
+      .textSearch('search_item_multiple', word);
 
     if (error) {
       return redirect(`${search}?message=No item found for "${word}"`);

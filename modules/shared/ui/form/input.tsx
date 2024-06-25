@@ -10,7 +10,7 @@ export const Input = ({ name, placeholder, required }: InputProps) => {
       className="px-4 py-2 border rounded-md bg-inherit w-[350px]"
       name={name}
       placeholder={placeholder}
-      required
+      required={required}
     />
   );
 };
