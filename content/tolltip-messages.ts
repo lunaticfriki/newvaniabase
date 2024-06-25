@@ -4,4 +4,5 @@ export const TOOLTIP_MESSAGES = {
   logout_tooltip: 'Logout',
   items_tooltip: 'All Items',
   search_tooltip: 'Search',
+  new_item_tooltip: 'Add new item',
 };

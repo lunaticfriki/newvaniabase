@@ -5,6 +5,7 @@ import {
   Info,
   List,
   LogOut,
+  Plus,
   Search,
   X,
 } from 'lucide-react';
@@ -18,4 +19,5 @@ export const LucideIcons = {
   out: LogOut,
   items: List,
   search: Search,
+  new: Plus,
 };
