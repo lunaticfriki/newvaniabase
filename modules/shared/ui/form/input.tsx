@@ -2,15 +2,22 @@ interface InputProps {
   name: string;
   placeholder: string;
   required?: boolean;
+  type?: string;
 }
 
-export const Input = ({ name, placeholder, required }: InputProps) => {
+export const Input = ({
+  name,
+  placeholder,
+  required,
+  type = 'text',
+}: InputProps) => {
   return (
     <input
       className="px-4 py-2 border rounded-md bg-inherit w-[350px]"
       name={name}
       placeholder={placeholder}
       required={required}
+      type={type}
     />
   );
 };

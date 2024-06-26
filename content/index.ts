@@ -5,3 +5,4 @@ export * from './greeting';
 export * from './buttons';
 export * from './search';
 export * from './header';
+export * from './new-item';
