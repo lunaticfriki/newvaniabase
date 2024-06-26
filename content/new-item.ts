@@ -12,11 +12,11 @@ export const NewItemForm = [
   {
     name: 'publisher',
     placeholder: 'Publisher',
-    required: true,
+    required: false,
   },
   {
     name: 'topic',
     placeholder: 'Topic',
-    required: true,
+    required: false,
   },
 ];

@@ -36,9 +36,10 @@ export default function AddNewItemPage({
           </p>
         )}
         <SubmitButton
-          className="hover:text-[var(--primary)] transition-all flex items-center gap-2 justify-center"
+          className="px-4 py-2 mb-2 bg-[var(--primary)] rounded-md flex justify-center items-center"
           type="submit"
           pendingText="Adding..."
+          disabled
         >
           Add new item <LucideIcons.new />
         </SubmitButton>
