@@ -1,5 +1,5 @@
-import { BackButton, Input, LucideIcons } from '@/modules';
-import { ITEMS_CONTENT, NewItemForm } from '@/content';
+import { BackButton, Input, LucideIcons, Textarea } from '@/modules';
+import { CategoryListContent, ITEMS_CONTENT, NewItemForm } from '@/content';
 
 import { SubmitButton } from '@/app/login/submit-button';
 
@@ -23,12 +23,24 @@ export default function AddNewItemPage({
               required={el.required}
             />
           ))}
-          <textarea
+          <select
+            name="category"
             className="px-4 py-2 border rounded-md bg-inherit w-[350px]"
+          >
+            <option value="" hidden>
+              Select category
+            </option>
+            {CategoryListContent.map((category) => (
+              <option value={category.value} key={category.value}>
+                {category.name}
+              </option>
+            ))}
+          </select>
+          <Textarea
             name="description"
             placeholder="Description"
             rows={20}
-          ></textarea>
+          ></Textarea>
         </div>
         {searchParams?.message && (
           <p className="p-4 mt-4 text-center bg-foreground/10">
