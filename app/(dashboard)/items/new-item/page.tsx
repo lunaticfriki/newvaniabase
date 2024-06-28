@@ -11,7 +11,7 @@ export default function AddNewItemPage({
   const { add_new_item } = ITEMS_CONTENT;
 
   return (
-    <div className="grid w-[80%] h-full gap-2 px-8 place-content-center place-items-center">
+    <div className="grid w-full h-full gap-2 place-content-center place-items-center">
       <h2 className="text-2xl text-center">{add_new_item}</h2>
       <form className="flex flex-col justify-center w-full gap-2 animate-in">
         <div className="flex flex-col gap-2">
@@ -36,7 +36,7 @@ export default function AddNewItemPage({
             placeholder="Description"
             rows={20}
           ></Textarea>
-          <div className="flex gap-2">
+          <div className="flex justify-end w-full gap-2">
             <label htmlFor="completed" className="cursor-pointer">
               Completed
             </label>

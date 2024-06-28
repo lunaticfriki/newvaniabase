@@ -1,7 +1,6 @@
 import '@/assets/styles/globals.css';
 
-import { Header, Navigation, metadataContent } from '@/modules';
-
+import { metadataContent } from '@/modules';
 import { raj } from '@/assets/fonts';
 
 export const metadata = metadataContent;
@@ -14,8 +13,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={raj.className}>
       <body className="w-full min-h-screen grid grid-rows-[auto,1fr]">
-        <Header />
-        <main className="flex flex-col items-center w-full h-full">
+        <main className="flex flex-col items-center justify-center w-full h-full">
           {children}
         </main>
       </body>

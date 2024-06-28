@@ -13,7 +13,7 @@ export const Input = ({
   required,
   type = 'text',
   id,
-  className,
+  className = '',
 }: InputProps) => {
   return (
     <input

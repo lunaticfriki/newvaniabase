@@ -1,4 +1,3 @@
-import { BackButton } from '@/modules';
 import { PATHS } from '@/content';
 import { SubmitButton } from './submit-button';
 import { createClientServer } from '@/utils';
@@ -57,7 +56,6 @@ export default function Login({
   return (
     <div className="flex flex-col justify-center flex-1 w-full gap-2 px-8 sm:max-w-md">
       <form className="flex flex-col justify-center flex-1 w-full gap-2 animate-in">
-        <BackButton />
         <label className="text-md" htmlFor="email">
           Email
         </label>
