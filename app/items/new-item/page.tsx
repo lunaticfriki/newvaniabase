@@ -36,6 +36,17 @@ export default function AddNewItemPage({
             placeholder="Description"
             rows={20}
           ></Textarea>
+          <div className="flex gap-2">
+            <label htmlFor="completed" className="cursor-pointer">
+              Completed
+            </label>
+            <Input
+              type="checkbox"
+              name="completed"
+              id="completed"
+              className="cursor-pointer"
+            />
+          </div>
         </div>
         {searchParams?.message && (
           <p className="p-4 mt-4 text-center bg-foreground/10">
