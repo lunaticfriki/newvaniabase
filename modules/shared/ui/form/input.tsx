@@ -1,6 +1,6 @@
 interface InputProps {
   name: string;
-  placeholder: string;
+  placeholder?: string;
   required?: boolean;
   type?: string;
 }

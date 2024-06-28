@@ -1,4 +1,4 @@
-import { BackButton, Input, LucideIcons, Textarea } from '@/modules';
+import { BackButton, Input, LucideIcons, Select, Textarea } from '@/modules';
 import { CategoryListContent, ITEMS_CONTENT, NewItemForm } from '@/content';
 
 import { SubmitButton } from '@/app/login/submit-button';
@@ -23,19 +23,14 @@ export default function AddNewItemPage({
               required={el.required}
             />
           ))}
-          <select
-            name="category"
-            className="px-4 py-2 border rounded-md bg-inherit w-[350px]"
-          >
-            <option value="" hidden>
-              Select category
-            </option>
+          <Select name="category">
             {CategoryListContent.map((category) => (
               <option value={category.value} key={category.value}>
                 {category.name}
               </option>
             ))}
-          </select>
+          </Select>
+          <Input type="file" name="cover" />
           <Textarea
             name="description"
             placeholder="Description"
