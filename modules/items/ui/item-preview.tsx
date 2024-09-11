@@ -3,6 +3,9 @@ import type { Item } from '../types/item-types';
 import Link from 'next/link';
 
 export const ItemPreview = ({ item }: { item: Item }) => {
+
+  // TODO: Fix image preview style
+
   return (
     <Link
       href={`/items/${item.slug}`}
