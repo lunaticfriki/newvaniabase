@@ -1,6 +1,6 @@
 import { ITEMS_CONTENT } from '@/content';
-import type { Item } from '../types/item-types';
-import { ItemPreview } from './item-preview';
+import type { Item } from '@/modules';
+import { ItemPreview } from '@/modules';
 
 export const ItemsPreview = ({
   items,

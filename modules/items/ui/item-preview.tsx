@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import type { Item } from '../types/item-types';
+import type { Item } from '@/modules';
 import Link from 'next/link';
 
 export const ItemPreview = ({ item }: { item: Item }) => {

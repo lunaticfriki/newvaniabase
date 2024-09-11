@@ -1,6 +1,5 @@
 import { ITEMS_CONTENT } from '@/content';
-import { Item } from '../types/item-types';
-import { ItemsPreview } from './items-preview';
+import { Item, ItemsPreview } from '@/modules';
 
 export const Itemlist = ({ items, all }: { items: Item[]; all?: boolean }) => {
   const { no_items } = ITEMS_CONTENT;
