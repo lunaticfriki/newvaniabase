@@ -47,6 +47,8 @@ export default function SearchItemPage({
     return redirect(`${search}/${slugs.join(',')}`);
   };
 
+  // TODO: Move form to an independent component
+
   return (
     <div className="grid w-full h-full gap-2 px-8 place-content-center place-items-center sm:max-w-md">
       <h2 className="text-2xl text-center">{search_title}</h2>

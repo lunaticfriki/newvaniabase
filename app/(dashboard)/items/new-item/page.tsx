@@ -10,6 +10,8 @@ export default function AddNewItemPage({
 }) {
   const { add_new_item } = ITEMS_CONTENT;
 
+  // TODO: Move form to an independent component
+
   return (
     <div className="grid w-full h-full gap-2 place-content-center place-items-center">
       <h2 className="text-2xl text-center">{add_new_item}</h2>
@@ -40,6 +42,7 @@ export default function AddNewItemPage({
             <label htmlFor="completed" className="cursor-pointer">
               Completed
             </label>
+            {/*TODO: Style checkbox*/}
             <Input
               type="checkbox"
               name="completed"
